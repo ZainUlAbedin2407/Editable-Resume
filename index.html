@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Editable Resume</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>Resume Generator</h2>
+      <form id="resume-form">
+        <!-- Personal information -->
+        <div class="formsection">
+          <h3>Personal Information</h3>
+          <div class="input-group">
+            <label for="fullName">Full Name</label>
+            <input type="text" id="fullName" name="fullName" required />
+          </div>
+          <div class="input-group">
+            <label for="profession">Profession</label>
+            <input type="text" id="profession" name="profession" required />
+          </div>
+          <div class="input-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" required />
+          </div>
+          <div class="input-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div class="input-group">
+            <label for="linkedin">LinkedIn URL</label>
+            <input type="url" id="linkedin" name="linkedin" required />
+          </div>
+        </div>
+
+        <!-- Education -->
+        <div class="formsection">
+          <h3>Education</h3>
+          <p>At least one Education is required</p>
+          <div id="educationInputs" class="dynamicInputs">
+            <div class="input-rows">
+              <input type="text" placeholder="Institution" required />
+              <input type="text" placeholder="Course/Degree" required />
+            </div>
+            <div class="input-rows">
+              <input type="text" placeholder="Institution" />
+              <input type="text" placeholder="Course/Degree" />
+            </div>
+            <div class="input-rows">
+              <input type="text" placeholder="Institution" />
+              <input type="text" placeholder="Course/Degree" />
+            </div>
+            <div class="input-rows">
+              <input type="text" placeholder="Institution" />
+              <input type="text" placeholder="Course/Degree" />
+            </div>
+            <div class="input-rows">
+              <input type="text" placeholder="Institution" />
+              <input type="text" placeholder="Course/Degree" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Professional Summary -->
+        <div class="formsection">
+          <h3>Professional Summary</h3>
+          <textarea
+            name="summary"
+            id="summary"
+            required
+            style="height: 91px"
+          ></textarea>
+        </div>
+
+        <!-- Projects -->
+        <div class="formsection">
+          <h3>Projects</h3>
+          <p>At least one project is required</p>
+          <div id="projectInputs" class="dynamicInputs">
+            <div class="input-rows">
+              <input type="text" placeholder="Project Name" required />
+              <input type="url" placeholder="Project URL" required />
+            </div>
+            <div class="input-rows">
+              <input type="text" placeholder="Project Name" />
+              <input type="url" placeholder="Project URL" />
+            </div>
+            <div class="input-rows">
+              <input type="text" placeholder="Project Name" />
+              <input type="url" placeholder="Project URL" />
+            </div>
+            <div class="input-rows">
+              <input type="text" placeholder="Project Name" />
+              <input type="url" placeholder="Project URL" />
+            </div>
+            <div class="input-rows">
+              <input type="text" placeholder="Project Name" />
+              <input type="url" placeholder="Project URL" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Skills -->
+        <div class="formsection">
+          <h3>Skills</h3>
+          <p>At least one skill is required</p>
+          <div id="skillInputs" class="dynamicInputs">
+            <input type="text" placeholder="Skill" required />
+          </div>
+          <div id="skillInputs" class="dynamicInputs">
+            <input type="text" placeholder="Skill" />
+          </div>
+          <div id="skillInputs" class="dynamicInputs">
+            <input type="text" placeholder="Skill" />
+          </div>
+          <div id="skillInputs" class="dynamicInputs">
+            <input type="text" placeholder="Skill" />
+          </div>
+          <div id="skillInputs" class="dynamicInputs">
+            <input type="text" placeholder="Skill" />
+          </div>
+        </div>
+
+        <!-- Generate Resume Button -->
+        <button id="generateBtn" type="submit">Generate Resume</button>
+      </form>
+    </div>
+
+    <!-- Dynamic and Editable Resume -->
+    <div class="container" id="resumeDisplay" contenteditable="true">
+      <!-- HERE RESUME WILL BE DISPLAY BY USER DATA -->
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
