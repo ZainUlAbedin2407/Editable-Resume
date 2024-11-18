@@ -95,9 +95,10 @@ button:hover {
   opacity: 0.9;
 }
 
-#generateBtn {
+#generateBtn, #shareBtn, #printBtn, #editBtn {
   background-color: #004d40;
   width: 100%;
+  margin: 5px 0;
 }
 
 b {
@@ -119,6 +120,16 @@ p {
   width: 100%;
 }
 
-#resumeDisplay{
-  outline: none;
+.editable-field {
+  outline: none; 
+}
+
+.editable-field:focus {
+  outline: none; 
+}
+
+@media print {
+  #ButtonSection {  
+    display: none !important; 
+  }
 }

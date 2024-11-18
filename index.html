@@ -3,11 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Editable Resume</title>
+    <title>Shareable Resume</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="container">
+    <div class="container" id="resumeFormContainer">
       <h2>Resume Generator</h2>
       <form id="resume-form">
         <!-- Personal information -->
@@ -129,8 +129,14 @@
     </div>
 
     <!-- Dynamic and Editable Resume -->
-    <div class="container" id="resumeDisplay" contenteditable="true">
+    <div class="container" id="resumeDisplay" style="display: none;">
       <!-- HERE RESUME WILL BE DISPLAY BY USER DATA -->
+      <h1>Resume for: <span id="displayName"></span></h1>
+    </div>
+    
+    <div class="container" id="ButtonSection" style="display: none; ">
+      <button id="editBtn">Edit Resume</button>
+      <button id="printBtn">Print</button>
     </div>
     <script src="script.js"></script>
   </body>
