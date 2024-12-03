@@ -3,141 +3,91 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Shareable Resume</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>Resume Generator - Create Your Professional Resume</title>
+    <link rel="stylesheet" href="landing-style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css"
+      integrity="sha512-9xKTRVabjVeZmc+GUW8GgSmcREDunMM+Dt/GrzchfN8tkwHizc5RP4Ok/MXFFy5rIjJjzhndFScTceq5e6GvVQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
-    <div class="container" id="resumeFormContainer">
-      <h2>Resume Generator</h2>
-      <form id="resume-form">
-        <!-- Personal information -->
-        <div class="formsection">
-          <h3>Personal Information</h3>
-          <div class="input-group">
-            <label for="fullName">Full Name</label>
-            <input type="text" id="fullName" name="fullName" required />
+    <header>
+      <nav>
+        <div class="logo">
+          <i class="fa-regular fa-file-lines" style="font-size: 20px"></i>
+          <span>Resume Generator</span>
+        </div>
+        <ul>
+          <li class="feat-nav"><a href="#features">Features</a></li>
+          <li><a class="how-nav" href="#how-it-works">How It Works</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="hero">
+        <h1>Create Your Professional Resume in Minutes</h1>
+        <p>
+          Our easy-to-use resume generator helps you create a standout resume
+          that gets you noticed by employers.
+        </p>
+        <a href="form.html" class="cta-button">Get Started</a>
+      </section>
+
+      <section id="features">
+        <h2 style="margin-bottom: 20px">Features</h2>
+        <div class="feature-container">
+          <div class="feature">
+            <i class="fa-regular fa-file-lines"></i>
+            <h3>Easy to Use</h3>
+            l
+            <p>Simple form-based interface to input your information</p>
           </div>
-          <div class="input-group">
-            <label for="profession">Profession</label>
-            <input type="text" id="profession" name="profession" required />
+          <div class="feature">
+            <i class="fa-regular fa-pen-to-square"></i>
+            <h3>Customizable</h3>
+            <p>Edit and update your resume anytime</p>
           </div>
-          <div class="input-group">
-            <label for="phone">Phone Number</label>
-            <input type="tel" id="phone" name="phone" required />
-          </div>
-          <div class="input-group">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required />
-          </div>
-          <div class="input-group">
-            <label for="linkedin">LinkedIn URL</label>
-            <input type="url" id="linkedin" name="linkedin" required />
+          <div class="feature">
+            <i class="fa-solid fa-print"></i>
+            <h3>Print Ready</h3>
+            <p>Generate a professional, print-ready resume</p>
           </div>
         </div>
+      </section>
 
-        <!-- Education -->
-        <div class="formsection">
-          <h3>Education</h3>
-          <p>At least one Education is required</p>
-          <div id="educationInputs" class="dynamicInputs">
-            <div class="input-rows">
-              <input type="text" placeholder="Institution" required />
-              <input type="text" placeholder="Course/Degree" required />
-            </div>
-            <div class="input-rows">
-              <input type="text" placeholder="Institution" />
-              <input type="text" placeholder="Course/Degree" />
-            </div>
-            <div class="input-rows">
-              <input type="text" placeholder="Institution" />
-              <input type="text" placeholder="Course/Degree" />
-            </div>
-            <div class="input-rows">
-              <input type="text" placeholder="Institution" />
-              <input type="text" placeholder="Course/Degree" />
-            </div>
-            <div class="input-rows">
-              <input type="text" placeholder="Institution" />
-              <input type="text" placeholder="Course/Degree" />
-            </div>
+      <section id="how-it-works">
+        <h2 style="margin-bottom: 20px">How It Works</h2>
+        <div class="steps-container">
+          <div class="step">
+            <div class="step-number">1</div>
+            <h3>Fill in Your Details</h3>
+            <p>
+              Enter your personal information, education, skills, and projects
+            </p>
+          </div>
+          <div class="step">
+            <div class="step-number">2</div>
+            <h3>Generate Resume</h3>
+            <p>
+              Click the "Generate Resume" button to create your professional
+              resume
+            </p>
+          </div>
+          <div class="step">
+            <div class="step-number">3</div>
+            <h3>Edit and Print</h3>
+            <p>Make any final adjustments and print your resume</p>
           </div>
         </div>
+      </section>
+    </main>
 
-        <!-- Professional Summary -->
-        <div class="formsection">
-          <h3>Professional Summary</h3>
-          <textarea
-            name="summary"
-            id="summary"
-            required
-            style="height: 91px"
-          ></textarea>
-        </div>
-
-        <!-- Projects -->
-        <div class="formsection">
-          <h3>Projects</h3>
-          <p>At least one project is required</p>
-          <div id="projectInputs" class="dynamicInputs">
-            <div class="input-rows">
-              <input type="text" placeholder="Project Name" required />
-              <input type="url" placeholder="Project URL" required />
-            </div>
-            <div class="input-rows">
-              <input type="text" placeholder="Project Name" />
-              <input type="url" placeholder="Project URL" />
-            </div>
-            <div class="input-rows">
-              <input type="text" placeholder="Project Name" />
-              <input type="url" placeholder="Project URL" />
-            </div>
-            <div class="input-rows">
-              <input type="text" placeholder="Project Name" />
-              <input type="url" placeholder="Project URL" />
-            </div>
-            <div class="input-rows">
-              <input type="text" placeholder="Project Name" />
-              <input type="url" placeholder="Project URL" />
-            </div>
-          </div>
-        </div>
-
-        <!-- Skills -->
-        <div class="formsection">
-          <h3>Skills</h3>
-          <p>At least one skill is required</p>
-          <div id="skillInputs" class="dynamicInputs">
-            <input type="text" placeholder="Skill" required />
-          </div>
-          <div id="skillInputs" class="dynamicInputs">
-            <input type="text" placeholder="Skill" />
-          </div>
-          <div id="skillInputs" class="dynamicInputs">
-            <input type="text" placeholder="Skill" />
-          </div>
-          <div id="skillInputs" class="dynamicInputs">
-            <input type="text" placeholder="Skill" />
-          </div>
-          <div id="skillInputs" class="dynamicInputs">
-            <input type="text" placeholder="Skill" />
-          </div>
-        </div>
-
-        <!-- Generate Resume Button -->
-        <button id="generateBtn" type="submit">Generate Resume</button>
-      </form>
-    </div>
-
-    <!-- Dynamic and Editable Resume -->
-    <div class="container" id="resumeDisplay" style="display: none;">
-      <!-- HERE RESUME WILL BE DISPLAY BY USER DATA -->
-      <h1>Resume for: <span id="displayName"></span></h1>
-    </div>
-    
-    <div class="container" id="ButtonSection" style="display: none; ">
-      <button id="editBtn">Edit Resume</button>
-      <button id="printBtn">Print</button>
-    </div>
-    <script src="script.js"></script>
+    <footer>
+      <p>&copy; 2024 Shareable Resume. All rights reserved.</p>
+    </footer>
   </body>
 </html>
